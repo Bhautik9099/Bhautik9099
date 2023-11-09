@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: auto;
+    width: 80%;
+    /* border: 1px solid black; */
+    color: #5e0404;
+    padding: 30px 0px;
+    margin: 30px auto;
+    background: #fcf5f5;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #daaaaa;
+}
+
+.main .heading{
+    background: linear-gradient(#c58686, #a46464, #924343, #560b0b);
+    color: #fae7e7;
+    text-align: center;
+    font-size: 28px;
+    padding: 5px;
+    text-shadow: 5px 5px 10px black;
+}
+
+.main .child{
+    width:80%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 30px auto;
+    font-size: 18px;
+}
+
+.main .contain{
+    font-size: 18px;
+    /* margin-bottom: 20px; */
+}
+.main .contain .ans{
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 10px;
+    /* border: 1px solid black; */
+}
+.child .ex{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 0px 10px 20px;
+}
+.main .child .example{
+    /* border: 1px solid black; */
+    height: auto;
+    width: auto;
+    /* padding: 10px 0px; */
+    margin: 20px 0px 30px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #daaaaa;
+    background-color: #f9dcdc;
+}
+.css{
+    font-size: 20px; 
+    padding: 10px 50px; 
+    font-weight: bold; 
+    background-color: #de9292;
+    border-radius: 10px;
+}
+.main .child .rul-set{
+    margin: 50px 20px;
+}
+.main .child .rul-set h3{
+    margin: 10px 0px;
+}
+.main .child .rul-set ol{
+    /* border: 1px solid black; */
+    width: 200px;
+    margin: 10px 80px;
+    font-weight: bold;
+}
+.next{
+    width: 70px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #f7dbdb;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px #daaaaa;
+}
+.next a{
+    text-decoration: none;
+    color: #560b0b;
+}
+.next:hover{
+    background-color: #560b0b;
+}
+.next a:hover{
+    color: #f3e1e1;;
+}
