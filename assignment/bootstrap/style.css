@@ -1,0 +1,15 @@
+.nav-link li
+{
+display: inline-block;
+}
+.nav-link li a
+{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    padding: 10px;
+}
+.input
+{
+    margin-right: 250px;
+}
