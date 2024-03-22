@@ -1,0 +1,14 @@
+#clock
+{
+    width: 70%;
+    height: auto;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 180px;
+    font-size: 50px;
+    font-size: 100px;
+    background: linear-gradient(30deg, rgb(234, 67, 114) 30%, rgba(73, 190, 100, 0.772) 50%, rgb(209, 37, 171) 100%);
+    border-radius: 10px;
+
+}
