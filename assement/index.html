@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Booking Form</title>
+</head>
+<body>
+<h2>Restaurant Booking Form</h2>
+<div id="bookingForm"></div>
+
+<script>
+// Create form elements
+const bookingForm = document.getElementById("bookingForm");
+
+const bookingChoiceLabel = document.createElement("label"); 
+bookingChoiceLabel.textContent = "Choice of booking: ";
+const bookingChoiceSelect = document.createElement("select");
+const options = ["Full day booking", "Half day booking", "Hourly booking"];
+options.forEach(option => {
+  const opt = document.createElement("option");
+  opt.value = option;
+  opt.textContent = option;
+  bookingChoiceSelect.appendChild(opt);
+});
+
+const nameLabel = document.createElement("label");
+nameLabel.textContent = "User name: ";
+const nameInput = document.createElement("input");
+nameInput.type = "text";
+
+const mobileLabel = document.createElement("label");
+mobileLabel.textContent = "Mobile Number: ";
+const mobileInput = document.createElement("input");
+mobileInput.type = "tel";
+
+const emailLabel = document.createElement("label");
+emailLabel.textContent = "Email: ";
+const emailInput = document.createElement("input");
+emailInput.type = "email";
+
+const personsLabel = document.createElement("label");
+personsLabel.textContent = "No of person: ";
+const personsInput = document.createElement("input");
+personsInput.type = "number";
+
+const dateLabel = document.createElement("label");
+dateLabel.textContent = "Date: ";
+const dateInput = document.createElement("input");
+dateInput.type = "date";
+
+const timeLabel = document.createElement("label");
+timeLabel.textContent = "Time: ";
+const timeInput = document.createElement("input");
+timeInput.type = "time";
+
+const slotLabel = document.createElement("label");
+slotLabel.textContent = "Slot: ";
+const slotSelect = document.createElement("select");
+const slotOptions = ["Breakfast", "Lunch", "Dinner"];
+slotOptions.forEach(option => {
+  const opt = document.createElement("option");
+  opt.value = option;
+  opt.textContent = option;
+  slotSelect.appendChild(opt);
+});
+
+// Append form elements to form
+bookingForm.appendChild(bookingChoiceLabel);
+bookingForm.appendChild(bookingChoiceSelect);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(nameLabel);
+bookingForm.appendChild(nameInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(mobileLabel);
+bookingForm.appendChild(mobileInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(emailLabel);
+bookingForm.appendChild(emailInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(personsLabel);
+bookingForm.appendChild(personsInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(dateLabel);
+bookingForm.appendChild(dateInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(timeLabel);
+bookingForm.appendChild(timeInput);
+bookingForm.appendChild(document.createElement("br"));
+bookingForm.appendChild(slotLabel);
+bookingForm.appendChild(slotSelect);
+bookingForm.appendChild(document.createElement("br"));
+
+// Event listener for choice of booking
+bookingChoiceSelect.addEventListener("change", function() {
+  const selectedOption = bookingChoiceSelect.value;
+  if (selectedOption === "Full day booking") {
+    // Hide unnecessary fields
+    timeLabel.style.display = "none";
+    timeInput.style.display = "none";
+    slotLabel.style.display = "none";
+    slotSelect.style.display = "none";
+  } else if (selectedOption === "Half day booking") {
+    // Show relevant fields
+    dateLabel.style.display = "inline";
+    dateInput.style.display = "inline";
+    slotLabel.style.display = "inline";
+    slotSelect.style.display = "inline";
+    // Hide unnecessary fields
+    timeLabel.style.display = "none";
+    timeInput.style.display = "none";
+  } else if (selectedOption === "Hourly booking") {
+    // Show relevant fields
+    dateLabel.style.display = "inline";
+    dateInput.style.display = "inline";
+    timeLabel.style.display = "inline";
+    timeInput.style.display = "inline";
+    // Hide unnecessary fields
+    slotLabel.style.display = "none";
+    slotSelect.style.display = "none";
+  }
+});
+
+</script>
+</body>
+</html>
